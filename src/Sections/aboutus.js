@@ -35,12 +35,10 @@ function AboutUs() {
               <div className="heading-bx">
                 <h6>About Us</h6>
                 <h2 className="title">
-                  The Great Place Of Medical Hospital Center
+                Streamlined bookings. Exceptional care.
                 </h2>
                 <p>
-                  We provide the special tips and advice’s of heath care
-                  treatment and high level of best technology involve in the our
-                  hospital.
+                At AppointmentPro, we are committed to transforming healthcare by simplifying appointment management. Our platform empowers patients and providers with seamless booking, improved access to medical reports, and enhanced efficiency, ensuring a better healthcare experience for all
                 </p>
               </div>
               <div className="row">

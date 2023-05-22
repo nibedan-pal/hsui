@@ -64,7 +64,7 @@ a {
 .scroll-to-top {
   width: 50px !important;
   height: 50px !important;
-  background: #565acf !important;
+  background: #ec1919 !important;
   font-size: 17px !important;
   padding: 6px !important;
   border-radius: 30% !important;
@@ -84,9 +84,9 @@ a {
 }
 
 .btn-secondary {
-  background-color: #f17732 !important;
+  background-color: #ec1919 !important;
   color: #fff;
-  border-color: #f17732 !important;
+  border-color: #ec1919 !important;
 }
 
 .btn-lg {
@@ -145,7 +145,7 @@ a {
   width: 60px;
   height: 60px;
   margin-bottom: 10px;
-  color: #565acf;
+  color: #ec1919;
 }
 
 .feature-bx2 .icon-content p {
@@ -166,7 +166,7 @@ h3 {
 
 .service-wraper:after {
   content: "";
-  background-color: #565acf;
+  background-color: #ec1919;
   height: 100%;
   width: 45%;
   position: absolute;

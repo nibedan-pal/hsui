@@ -39,35 +39,6 @@ function NavBars() {
               <Link to={"/booking"} className="nav-link">
                 Booking
               </Link>
-              {data?.isAuthenticated ? (
-                <Link
-                  to=""
-                  className="nav-link"
-                  onClick={() => {
-                    dispatch({ type: "AUTH_LOGOUT" });
-                    notify("Logged out");
-                  }}
-                >
-                  Logout
-                </Link>
-              ) : (
-                <NavDropdown title="Login" id="basic-nav-dropdown">
-                  <Link to={"/login"} className="dropdown-item">
-                    Patient
-                  </Link>
-                  <a href="https://hm-system.netlify.app/" className="dropdown-item">
-                    Staff
-                  </a>
-                </NavDropdown>
-              )}
-              <Link to="/Report" className="nav-link">
-                <button type="button">
-                  Report
-                  <span>
-                    <IoIosArrowForward />
-                  </span>
-                </button>
-              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

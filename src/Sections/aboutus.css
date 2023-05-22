@@ -62,7 +62,7 @@
   font-weight: 800;
   position: relative;
   display: block;
-  color: #565acf;
+  color: #ef310b;
   z-index: 2;
   width: 220px;
 }
@@ -70,7 +70,7 @@
 .about-images .exp-bx span {
   display: block;
   font-size: 18px;
-  color: #1f2278;
+  color: #ed220f;
 }
 
 .about-images .exp-bx:after {
@@ -80,7 +80,7 @@
   left: 10px;
   width: 100%;
   height: 100%;
-  border: 2px solid #565acf;
+  border: 2px solid #e6180a;
   border-radius: 60px 60px 0 60px;
   z-index: -1;
 }
@@ -99,7 +99,7 @@ img {
   left: 43%;
   width: 50px;
   height: 50px;
-  background-color: #f17732;
+  background-color: #f81707;
   border-radius: 15px;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -117,13 +117,13 @@ img {
   background-position: 50%;
   background-repeat: repeat;
   margin-bottom: 15px;
-  color: #f17732 !important;
+  color: #ec1919 !important;
 }
 
 .heading-bx h2.title {
   font-size: 36px;
   font-weight: 700;
-  color: #1f2278;
+  color: #056307;
 }
 
 .heading-bx p {
@@ -133,7 +133,7 @@ img {
 }
 
 .feature1 {
-  border-color: #b2f0fb;
+  border-color: #f12809;
   align-items: center;
   display: flex;
   background-color: #fff;
@@ -141,8 +141,8 @@ img {
   padding: 10px 20px 10px 15px;
   z-index: 1;
   overflow: hidden;
-  box-shadow: 0 5px 30px 0 rgb(31 34 120 / 8%);
-  border: 1px solid #565acf;
+  box-shadow: 0 5px 30px 0 rgba(240, 53, 6, 0.08);
+  border: 1px solid #e91708;
   position: relative;
 }
 
@@ -158,7 +158,7 @@ img {
 .feature1 .icon-cell svg {
   width: 45px;
   height: 45px;
-  color: #565acf;
+  color: #ec1919;
 }
 
 .icon-content {

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./about.css";
 import { FiHome } from "react-icons/fi";
 import NavBars from "../Sections/navbar";
@@ -13,6 +14,65 @@ import ToTop from "../Sections/totop";
 import { Link } from "react-router-dom";
 
 function OurTeam() {
+  const doctors = [
+    {
+      name: "Dr. Amit Kumar",
+      specialization: "Cardiologist",
+      patients: "Cardiac patients",
+      image: member3,
+      availableDates: ["2023-05-25", "2023-05-26", "2023-05-27"],
+    },
+    {
+      name: "Dr. Rajendra Patel",
+      specialization: "Cardiologist",
+      patients: "Cardiac patients",
+      image: member4,
+      availableDates: ["2023-05-25", "2023-05-26", "2023-05-27"],
+    },
+    {
+      name: "Dr. Salman Ajani",
+      specialization: "Neurologist",
+      patients: "Neurological patients",
+      image: member6,
+      availableDates: ["2023-05-25", "2023-05-26", "2023-05-27"],
+    },
+    {
+      name: "Dr. Addition Smith",
+      specialization: "Physiotherapist",
+      patients: "Physical therapy patients",
+      image: member1,
+      availableDates: ["2023-05-25", "2023-05-26", "2023-05-27"],
+    },
+    {
+      name: "Dr. Mahfuz Riad",
+      specialization: "ENT",
+      patients: "ENT patients",
+      image: member2,
+      availableDates: ["2023-05-25", "2023-05-26", "2023-05-27"],
+    },
+    {
+      name: "Dr. David Benjamin",
+      specialization: "Operations",
+      patients: "Surgical patients",
+      image: member5,
+      availableDates: ["2023-05-25", "2023-05-26", "2023-05-27"],
+    },
+  ];
+
+  const [selectedDoctor, setSelectedDoctor] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleBookNow = (doctor, date) => {
+    setSelectedDoctor(doctor);
+    setSelectedDate(date);
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
+
   return (
     <div>
       <NavBars />
@@ -40,192 +100,71 @@ function OurTeam() {
       </div>
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-lg-4 col-sm-6 mb-30">
-            <div className="team-member">
-              <div className="team-media">
-                <img src={member3} alt="img" />
-              </div>
-              <div className="team-info">
-                <div className="team-info-comntent">
-                  <h4 className="title">Dr. Piyush Agrawal</h4>
-                  <span className="text-secondary">Dentist</span>
+          {doctors.map((doctor, index) => (
+            <div className="col-lg-4 col-sm-6 mb-30" key={index}>
+              <div className="team-member">
+                <div className="team-media">
+                  <img src={doctor.image} alt="img" />
                 </div>
-                <ul className="social-media">
-                  <li>
-                    <Link to="">
-                      <FaTwitter />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaInstagram />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaLinkedin />
-                    </Link>
-                  </li>
-                </ul>
+                <div className="team-info">
+                  <div className="team-info-comntent">
+                    <h4 className="title">{doctor.name}</h4>
+                    <span className="text-secondary">{doctor.specialization}</span>
+                  </div>
+                  <ul className="social-media">
+                    <li>
+                      <Link to="">
+                        <FaTwitter />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="">
+                        <FaInstagram />
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="">
+                        <FaLinkedin />
+                      </Link>
+                    </li>
+                  </ul>
+                  <div className="book-now-btn">
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => handleBookNow(doctor, doctor.availableDates[0])}
+                    >
+                      Availability
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mb-30">
-            <div className="team-member">
-              <div className="team-media">
-                <img src={member4} alt="img" />
-              </div>
-              <div className="team-info">
-                <div className="team-info-comntent">
-                  <h4 className="title">Dr. Rajendra Patel</h4>
-                  <span className="text-secondary">Cardiologist</span>
-                </div>
-                <ul className="social-media">
-                  <li>
-                    <Link to="">
-                      <FaTwitter />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaInstagram />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaLinkedin />
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mb-30">
-            <div className="team-member">
-              <div className="team-media">
-                <img src={member6} alt="img" />
-              </div>
-              <div className="team-info">
-                <div className="team-info-comntent">
-                  <h4 className="title">Dr. Salman Ajani</h4>
-                  <span className="text-secondary">Neurologist</span>
-                </div>
-                <ul className="social-media">
-                  <li>
-                    <Link to="">
-                      <FaTwitter />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaInstagram />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaLinkedin />
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-      <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-4 col-sm-6 mb-30">
-            <div className="team-member">
-              <div className="team-media">
-                <img src={member1} alt="img" />
-              </div>
-              <div className="team-info">
-                <div className="team-info-comntent">
-                  <h4 className="title">Dr. Addition Smith</h4>
-                  <span className="text-secondary">Physiotherapist</span>
-                </div>
-                <ul className="social-media">
-                  <li>
-                    <Link to="">
-                      <FaTwitter />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaInstagram />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaLinkedin />
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mb-30">
-            <div className="team-member">
-              <div className="team-media">
-                <img src={member2} alt="img" />
-              </div>
-              <div className="team-info">
-                <div className="team-info-comntent">
-                  <h4 className="title">Dr. Mahfuz Riad</h4>
-                  <span className="text-secondary">ENT</span>
-                </div>
-                <ul className="social-media">
-                  <li>
-                    <Link to="">
-                      <FaTwitter />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaInstagram />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaLinkedin />
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mb-30">
-            <div className="team-member">
-              <div className="team-media">
-                <img src={member5} alt="img" />
-              </div>
-              <div className="team-info">
-                <div className="team-info-comntent">
-                  <h4 className="title">Dr. David Benjamin</h4>
-                  <span className="text-secondary">Operations</span>
-                </div>
-                <ul className="social-media">
-                  <li>
-                    <Link to="">
-                      <FaTwitter />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaInstagram />
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="">
-                      <FaLinkedin />
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
+      
+      {showPopup && (
+        <div className="popup-container">
+          <div className="popup">
+            <h3>Book Appointment</h3>
+            <p>
+              Doctor: <strong>{selectedDoctor.name}</strong>
+            </p>
+            <p>
+              Specialization: <strong>{selectedDoctor.specialization}</strong>
+            </p>
+            <p>
+              Patients: <strong>{selectedDoctor.patients}</strong>
+            </p>
+            <p>
+              Available Date: <strong>{selectedDate}</strong>
+            </p>
+            <button className="btn btn-primary" onClick={handleClosePopup}>
+              Close
+            </button>
           </div>
         </div>
-      </div>
+      )}
       <Footer />
       <ToTop />
     </div>

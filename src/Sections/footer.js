@@ -22,7 +22,7 @@ function Footer() {
                     </Link>
                   </div>
                   <div className="ft-contact">
-                    <p>Protecting and Taking Care To Of Your Health</p>
+                    <p>Seamless appointments, empowered healthcare</p>
                   </div>
                 </div>
               </div>
@@ -131,11 +131,11 @@ function Footer() {
                 <p className="copyright-text">
                   Copyright © 2023 Redesign & Redeveloped by
                   <a
-                    href="https://github.com/piyush-agrawal6"
+                    href="https://github.com/arunima313"
                     className="text-secondary"
                     target="_blank"
                   >
-                    Piyush Agrawal
+                    Arunima Pal and Amisha Kumari
                   </a>
                 </p>
               </div>
